@@ -2,3 +2,20 @@
     color: white;
 }
 
+.game-container {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.title-container {
+    text-align: center;
+    width: 500px;
+    border: 1px solid grey;
+}
+
+.tile-container {
+    color:blue;
+   
+}
