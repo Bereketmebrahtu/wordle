@@ -1,12 +1,16 @@
 * {
-    color: white;
+    color: black;
 }
 
+body {
+    background-color: azure;
+}
 .game-container {
-    background-color: grey;
+    background-color: lightslategray;
     display: flex;
     justify-content: space-between;
     height: 80vh;
+    margin: 50px;
 }
 
 .title-container {
@@ -16,6 +20,11 @@
 }
 
 .tile-container {
-    color:blue;
+    background-color:blue;
    
+}
+
+.keyboard-container {
+    margin: 50px;
+    
 }
