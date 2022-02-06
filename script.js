@@ -3,33 +3,34 @@ const keyboard = document.querySelector('.keyboard-container')
 
 
 const keys = [
-'A',
-'B',
-'C',
-'D',
+'Q',
+'W',
 'E',
+'R',
+'T',
+'Y',
+'U',
+'I',
+'O',
+'P',
+'A',
+'S',
+'D',
 'F',
 'G',
 'H',
-'I',
 'J',
 'K',
 'L',
-'M',
-'N',
-'O',
-'P',
-'Q',
-'R',
-'S',
-'T',
-'U',
-'V',
-'W',
-'X',
-'Y',
+'ENTER',
 'Z',
-'ENTER', 
+'X',
+'C',
+'V',
+'B',
+'N',
+'M',
+'<='
 
 ]
 
@@ -39,6 +40,12 @@ const keys = [
 keys.forEach(key => {
     const buttonEl = document.createElement('button')
     buttonEl.textContent = key
+    buttonEl.setAttribute('id', key)
+    buttonEl.addEventListener('click', click())
     keyboard.append(buttonEl)
     
 })
+
+function click() {
+    console.log('clicked')
+}
