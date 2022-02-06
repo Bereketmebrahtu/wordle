@@ -4,12 +4,14 @@
 }
   
 .game-container {
-    border: 1px solid grey;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 80vh;
+    width: 500px;
     align-items: center;
+   
 }
 
 .title-container {
@@ -20,15 +22,15 @@
 }
 
 .tile-container {
-    width: 300px;
+    
     margin-bottom: 50px;
 }
 
 .keyboard-container {
+  
    display: flex;
    flex-wrap: wrap;
-   width: 550px;
-   margin-bottom: 50px;
+   width: 500px;
    align-items: center;
     
 }
@@ -36,9 +38,10 @@
 .keyboard-container button {
     padding:10px;
     margin:2px;
-    background-color:gray;
+    background-color: gray;
     color: white;
     border-radius: 5px;
+    border: none;
 }
 
 .keayboard-container button:nth-child(27),
@@ -48,4 +51,20 @@
 
 .keayboard-container button:nth-child(15) {
     margin-left: 30px;
+}
+
+.tile-container .tile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: 2px;
+
+}
+
+.tile-container div {
+    display: flex;
 }
