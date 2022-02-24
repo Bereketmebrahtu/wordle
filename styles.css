@@ -3,6 +3,11 @@
     color: white;
   
 }
+
+body {
+
+    background-color: gray;
+}
   
 .game-container {
     
@@ -10,14 +15,15 @@
     flex-direction: column;
     justify-content: space-between;
     height: 80vh;
-    width: 500px;
     align-items: center;
-    background-color: gray;
+    padding-bottom: 30px;
    
 }
 
 .title-container {
     text-align: center;
+    width: 500px;
+    border-bottom: 1px solid #494950
      
 
     
@@ -26,6 +32,7 @@
 .tile-container {
     
     margin-bottom: 50px;
+
 }
 
 .keyboard-container {
@@ -34,15 +41,16 @@
    flex-wrap: wrap;
    width: 500px;
    align-items: center;
+   padding-top: 30px;
     
 }
-
-/* .keyboard-container button:nth-child(20),
-.keyboard-contaniner button:nth-child(20) {
-    width:
-} */
+ .keyboard-container button:nth-child(20),
+.keyboard-contaniner button:nth-child(28) {
+    width: 90px;
+}
 
 .keyboard-container button:nth-child(11) {
+
     margin-left: 30px;
 }
 
