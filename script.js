@@ -1,5 +1,6 @@
-const tiles = document.querySelector('.tile-container')
-const keyboard = document.querySelector('.keyboard-container')
+const tilesEl = document.querySelector('.tile-container')
+const keyboardEl = document.querySelector('.keyboard-container')
+
 
 //grabbed HTML elements using class names
 
@@ -44,26 +45,17 @@ keys.forEach(key => {
     buttonEl.textContent = key
     buttonEl.setAttribute('id', key)
     buttonEl.addEventListener('click', () => buttonClick(key))
-    keyboard.append(buttonEl)
+    keyboardEl.append(buttonEl)
     
 })
 
-let currentRow = 0
-let currentTile = 0
-
 const buttonClick = (key) => {
 
-    addLetter(key)
-    currentTile++
+    console.log('clicked')
+ }
 
-}
 
-const addLetter = (key) => {
-    const tile = document.getElementById('emptyRow-' + currentRow + '-tile-' + currentTile)
-    tile.textContent = key
-    rowsEl[currentRow][currentTile] = key
-    // currentTile++
-}
+
 
 //iterated through our array using forEach method to create Button element for eack key
 //assigned a text key using the textContent 
@@ -74,7 +66,7 @@ const addLetter = (key) => {
 
 
 
-const rowsEl = [
+const guessRows = [
 
 ['', '', '', '', ''],
 ['', '', '', '', ''],
@@ -87,20 +79,20 @@ const rowsEl = [
 
 
 
-rowsEl.forEach((emptyRow, emptyRowIndex) => {
-    const tileRowsEl = document.createElement('div')
-    tileRowsEl.setAttribute('id', 'tilerow-' +  emptyRowIndex)
-   rowsEl.forEach((row, rowIndex) => {
-       const tileEl = document.createElement('div')
-       tileEl.setAttribute('id', 'emptyRow-' + rowIndex + '-tile-' + rowIndex)
-       tileRowsEl.append(tileEl)
-       tileEl.classList.add('tile')
-   })
 
-    tiles.append(tileRowsEl)
+
+guessRows.forEach((guessRow, guessRowIndex) => {
+    const rowEl = document.createElement('divs')
+    rowEl.setAttribute('id', 'guessRow-' + guessRowIndex)
+    guessRow.forEach((guess, guessIndex) => {                               // for each inside for each looing inside a loop  
+    const tileEl = document.createElement('div');
+    tileEl.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex);
+    rowEl.appendChild(tileEl)
+   
+    })   
+    tilesEl.appendChild(rowEl);  
 
 })
-
 
 //for each empty row create a div and give id + index(for numbering) using the setAttribute method
 // append created div element to the tiles element.
